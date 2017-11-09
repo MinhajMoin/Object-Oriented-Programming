@@ -2,7 +2,7 @@
 
 Button::Button(LTexture* image,Point pos):Entity(image,pos)
 {
-    buttonRects[0] = {457,1091,512,74};
+    buttonRects[0] = {457,1089,512,74};
     buttonRects[1] = {457,1174,512,74};
     this->height = buttonRects[0].h;
     this->width = buttonRects[0].w;

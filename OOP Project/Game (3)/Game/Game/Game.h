@@ -39,7 +39,7 @@ public:
     void collisionHandler(Entity*,List*);
     bool showSplash(long int& frame);
     bool hideSplash(long int& frame);
-    void Splash(long int& frame,int delay);
+    void Splash(long int& frame);
     void levelLoader(string = "");
     List playerEnt;
     List worldEnt;

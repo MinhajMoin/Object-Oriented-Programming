@@ -37,7 +37,7 @@ bool Game::init()
         }
 
         //Create window
-        gWindow = SDL_CreateWindow( "BRICRUMBLE!", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
+        gWindow = SDL_CreateWindow( "BRICRUMBLE!", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_FULLSCREEN );
         if( gWindow == NULL )
         {
             printf( "Window could not be created! SDL Error: %s\n", SDL_GetError() );
@@ -134,7 +134,7 @@ bool Game::hideSplash(long int& frame)
     return false;
 }
 
-void Game::Splash(long int& frame,int delay)
+void Game::Splash(long int& frame)
 {
     SDL_Rect splashRect = {0,0,SCREEN_WIDTH,SCREEN_HEIGHT};
     splashScreen.setAlpha(255);
@@ -181,9 +181,8 @@ void Game::gameLoop()
     //worldEnt.start->ent->incrementDmg();
     SDL_Event e;
     bool quit=false;
-    Uint32 sd = SDL_GetTicks();
     long int frame=0;
-    long int testframe =0;
+    int delay = 1;
     bool ballMoving = false;
     bool show = true;
     bool hide = false;
@@ -206,18 +205,49 @@ void Game::gameLoop()
             }
         }
 
-
         frame++;
         stringstream cc;
         cc << "BRICUMBLE | Frame = " << frame;
         SDL_SetWindowTitle(gWindow,cc.str().c_str());
         SDL_SetRenderDrawColor( gRenderer, 0, 0, 0, 255 );    //Clear screen
         SDL_RenderClear( gRenderer );
+        //Show the splash screen
+        if (splashLife)
+        {
+            bool stay;
+            if (show)
+            {
+                stay = showSplash(frame);
+                if (stay)
+                {
+                    splTick = SDL_GetTicks();
+                }
+            }
+            if (stay)
+            {
+                show = false;
+                Splash(frame);
+                if ((SDL_GetTicks()-splTick)/1000 >= delay && (frame*2)%256 == 0)
+                {
+                    hide = true;
+                    stay = false;
+                }
+            }
+            if (hide)
+            {
+                if (hideSplash(frame))
+                {
+                    splashLife = false;
+                }
+            }
+        }
+
+
 
         if (!mainMenu->getAlive())
         {
             //Rendering background
-            bgTexture.render(0,0,&bgRect,0,NULL,SDL_FLIP_NONE,gRenderer);
+            //bgTexture.render(0,0,&bgRect,0,NULL,SDL_FLIP_NONE,gRenderer);
             //worldEnt.clean();
             bgTexture.render(0,0,&bgRect,0,NULL,SDL_FLIP_NONE,gRenderer);
             //Rendering Game Board (boundaries)
@@ -257,26 +287,6 @@ void Game::gameLoop()
         else if (!splashLife)
         {
             mainMenu->render(frame,gRenderer);
-        }
-        //Show the splash Screen
-        if (splashLife)
-        {
-            bool shit;
-            if (show)
-            {
-                shit = showSplash(frame);
-                if (shit) splTick = SDL_GetTicks();
-            }
-            if (shit)
-            {
-                show = false;
-                Splash(frame,4);
-                if ((SDL_GetTicks()-splTick)/1000 == 5) {hide = true;shit = false;}
-            }
-            if (hide)
-            {
-                if (hideSplash(frame)){splashLife = false;}
-            }
         }
         SDL_RenderPresent(gRenderer);
     }
