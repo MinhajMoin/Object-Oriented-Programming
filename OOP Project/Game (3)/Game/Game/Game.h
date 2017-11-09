@@ -37,8 +37,8 @@ public:
     void gameLoop();
     void collisionHandler(Entity*,Entity*);
     void collisionHandler(Entity*,List*);
-    void showSplash(long int& frame);
-    void hideSplash(long int& frame);
+    bool showSplash(long int& frame);
+    bool hideSplash(long int& frame);
     void Splash(long int& frame,int delay);
     void levelLoader(string = "");
     List playerEnt;

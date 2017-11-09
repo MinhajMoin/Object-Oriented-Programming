@@ -116,24 +116,29 @@ void Game::close()
     Mix_Quit();
 }
 
-void Game::showSplash(long int& frame)
+bool Game::showSplash(long int& frame)
 {
+    if ((frame*2)%256 == 252) {return true;}
     SDL_Rect splashRect = {0,0,SCREEN_WIDTH,SCREEN_HEIGHT};
     splashScreen.setAlpha((frame*2)%256);
     splashScreen.render(0,0,&splashRect,0.0,NULL,SDL_FLIP_NONE,gRenderer);
+    return false;
 }
 
-void Game::hideSplash(long int& frame)
+bool Game::hideSplash(long int& frame)
 {
+    if (255 - (frame*2)%256 == 1) {return true;}
     SDL_Rect splashRect = {0,0,SCREEN_WIDTH,SCREEN_HEIGHT};
     splashScreen.setAlpha(255 -(frame*2)%256);
     splashScreen.render(0,0,&splashRect,0.0,NULL,SDL_FLIP_NONE,gRenderer);
+    return false;
 }
 
 void Game::Splash(long int& frame,int delay)
 {
-
-//        if ((float)(SDL_GetTicks()-firstTick)/1000 == delay+2.55) break;
+    SDL_Rect splashRect = {0,0,SCREEN_WIDTH,SCREEN_HEIGHT};
+    splashScreen.setAlpha(255);
+    splashScreen.render(0,0,&splashRect,0.0,NULL,SDL_FLIP_NONE,gRenderer);
 }
 
 void Game::gameLoop()
@@ -180,12 +185,15 @@ void Game::gameLoop()
     long int frame=0;
     long int testframe =0;
     bool ballMoving = false;
+    bool show = true;
+    bool hide = false;
+    Uint32 firstTick = SDL_GetTicks();
+    Uint32 splTick = 0;
     while( !quit )                          //Game loop
     {
-        if (splashLife) Splash(frame,3); splashLife =false;
-        while( SDL_PollEvent( &e ) != 0  && !splashLife)   //Handle events on queue
+        while( SDL_PollEvent( &e ) != 0)   //Handle events on queue
         {
-            if (mainMenu->getAlive()) mainMenu->handleEvents(e);
+            if (mainMenu->getAlive() && !splashLife) mainMenu->handleEvents(e);
             ball.handleEvents(e);
             //User requests quit
             if( e.type == SDL_QUIT || mainMenu->getOption() == MainMenu::QUIT )
@@ -198,28 +206,12 @@ void Game::gameLoop()
             }
         }
 
-        {
-            long int splashFrame = 0;
-            Uint32 firstTick = SDL_GetTicks();
-            bool show = true;
-            if (show)
-            {
-                showSplash(frame);
-            }
-            if ((SDL_GetTicks()-firstTick)/1000 == delay)
-            {
-                show = false;
-            }
-            if (!show)
-            {
-                hideSplash(frame);
-            }
-        }
 
         frame++;
-        //string title = to_string(frame);
-        SDL_SetWindowTitle(gWindow,"BRICRUMBLE CHUSS");
-        SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );    //Clear screen
+        stringstream cc;
+        cc << "BRICUMBLE | Frame = " << frame;
+        SDL_SetWindowTitle(gWindow,cc.str().c_str());
+        SDL_SetRenderDrawColor( gRenderer, 0, 0, 0, 255 );    //Clear screen
         SDL_RenderClear( gRenderer );
 
         if (!mainMenu->getAlive())
@@ -265,13 +257,27 @@ void Game::gameLoop()
         else if (!splashLife)
         {
             mainMenu->render(frame,gRenderer);
-//            cout << frame-testframe << ' ';
-//            if ((frame*2)%256 == 254) cout << endl;
-//            showSplash(frame);
-//            cout <<frame << ' ' << (SDL_GetTicks() - sd)/1000  << ' '  << frame/(SDL_GetTicks() - sd)/1000 <<' '<< (frame*2)%256<< '\r';
-//            if ((frame*2)%256 == 254)testframe = frame;
         }
-
+        //Show the splash Screen
+        if (splashLife)
+        {
+            bool shit;
+            if (show)
+            {
+                shit = showSplash(frame);
+                if (shit) splTick = SDL_GetTicks();
+            }
+            if (shit)
+            {
+                show = false;
+                Splash(frame,4);
+                if ((SDL_GetTicks()-splTick)/1000 == 5) {hide = true;shit = false;}
+            }
+            if (hide)
+            {
+                if (hideSplash(frame)){splashLife = false;}
+            }
+        }
         SDL_RenderPresent(gRenderer);
     }
     delete gameBoard;
