@@ -11,12 +11,7 @@ Entity::Entity(LTexture* image,Point pos)
     dx=0;
     dy=0;
     expFrame=0;
-    speedX=0;
-    speedY=0;
-    //width and height will be set in individual entities, same for the spriteclips
-    /*
-    this->width = spriteClips[ 0 ].w;
-    this->height = spriteClips[ 0 ].h;*/
+    speed=0;
 }
 
 Entity::~Entity()

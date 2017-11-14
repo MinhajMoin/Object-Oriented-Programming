@@ -44,6 +44,8 @@
 		<Unit filename="Board.h" />
 		<Unit filename="Brick.cpp" />
 		<Unit filename="Brick.h" />
+		<Unit filename="Bullet.cpp" />
+		<Unit filename="Bullet.h" />
 		<Unit filename="Button.cpp" />
 		<Unit filename="Button.h" />
 		<Unit filename="Entity.cpp" />
@@ -69,6 +71,8 @@
 		<Unit filename="Point.h" />
 		<Unit filename="Rect.cpp" />
 		<Unit filename="Rect.h" />
+		<Unit filename="Smasher.cpp" />
+		<Unit filename="Smasher.h" />
 		<Unit filename="SteelBrick.cpp" />
 		<Unit filename="SteelBrick.h" />
 		<Unit filename="Text.cpp" />

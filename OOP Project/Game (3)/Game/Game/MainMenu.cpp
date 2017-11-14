@@ -10,9 +10,9 @@ MainMenu::MainMenu(LTexture* image,Point pos):Entity(image,pos)
     for (int i=0; i<BUTTONSMAX; i++)
     {
         buttons.push_back(Button(image,pos));
-        buttons[i].setPosition(SCREEN_WIDTH/2 - width,SCREEN_HEIGHT/2);
+        buttons[i].setPosition(250,300+(i*100));
     }
-    buttons[0].buttonText->setText("New Game");
+    buttons[0].buttonText->setText("Play");
     buttons[1].buttonText->setText("Load");
     buttons[2].buttonText->setText("Credits");
     buttons[3].buttonText->setText("Quit");
@@ -27,22 +27,14 @@ MainMenu::~MainMenu()
 
 void MainMenu::setDimensions(int _SCREEN_WIDTH,int _SCREEN_HEIGHT)
 {
-    this->SCREEN_WIDTH = this->width = this->menuSprite.w = _SCREEN_WIDTH;
-    this->SCREEN_HEIGHT = this->height = this->menuSprite.h = _SCREEN_HEIGHT;
-    for (int i=0; i<BUTTONSMAX; i++)
-    {
-        buttons[i].setPosition(SCREEN_WIDTH/2 - buttons[i].getWidth()/2, SCREEN_HEIGHT/2 - buttons[i].getHeight()/2 + i*(buttons[i].getHeight()+20));
-        cout << buttons[i].Entity::getWidth() << ' ' << buttons[i].Entity::getHeight() << endl;
-    }
+    this->SCREEN_WIDTH = _SCREEN_WIDTH;
+    this->SCREEN_HEIGHT = _SCREEN_HEIGHT;
 }
 
 void MainMenu::render(long int& frame, SDL_Renderer* gRenderer)
 {
     spriteSheetTexture->render(0,0,&menuSprite,0.0,NULL,SDL_FLIP_NONE,gRenderer);
-    for (int i=0; i<BUTTONSMAX; i++)
-    {
-        buttons[i].render(frame,gRenderer);
-    }
+    for (int i=0; i<BUTTONSMAX; i++) buttons[i].render(frame,gRenderer);
 }
 
 int MainMenu::getOption()

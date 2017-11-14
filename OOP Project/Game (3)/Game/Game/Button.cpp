@@ -2,13 +2,12 @@
 
 Button::Button(LTexture* image,Point pos):Entity(image,pos)
 {
-    buttonRects[0] = {457,1089,512,74};
-    buttonRects[1] = {457,1174,512,74};
+    buttonRects[0] = {457,1035,512,73};
+    buttonRects[1] = {457,1148,512,73};
     this->height = buttonRects[0].h;
     this->width = buttonRects[0].w;
     this->bounds = {(int)pos.x,(int)pos.y,width,height};
     this->buttonText = new Text(" ",image,pos);
-    buttonText->setPosition(x+width/2,y+height/2);
 }
 
 Button::~Button()

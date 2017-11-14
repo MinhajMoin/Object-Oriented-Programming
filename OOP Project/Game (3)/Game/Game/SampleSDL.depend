@@ -1456,13 +1456,13 @@
 	"OneHitBrick.h"
 	"List.h"
 
-1509776603 source:c:\users\osama\desktop\oop project stuff\game\game\board.cpp
+1510334038 source:c:\users\osama\desktop\oop project stuff\game\game\board.cpp
 	"Board.h"
 
 1510033613 c:\users\osama\desktop\oop project stuff\game\game\board.h
 	"Entity.h"
 
-1510146217 c:\users\osama\desktop\oop project stuff\game\game\entity.h
+1510412176 c:\users\osama\desktop\oop project stuff\game\game\entity.h
 	"Point.h"
 	"LTexture.h"
 
@@ -1475,7 +1475,7 @@
 	<SDL.h>
 	<SDL_image.h>
 
-1510135783 source:c:\users\osama\desktop\oop project stuff\game\game\brick.cpp
+1510344072 source:c:\users\osama\desktop\oop project stuff\game\game\brick.cpp
 	"Brick.h"
 
 1510146217 c:\users\osama\desktop\oop project stuff\game\game\brick.h
@@ -1496,7 +1496,7 @@
 	"Entity.h"
 	"SDL.h"
 
-1510135614 source:c:\users\osama\desktop\oop project stuff\game\game\entity.cpp
+1510336396 source:c:\users\osama\desktop\oop project stuff\game\game\entity.cpp
 	"Entity.h"
 
 1510039384 source:c:\users\osama\desktop\oop project stuff\game\game\fileio.cpp
@@ -1506,7 +1506,7 @@
 	<fstream>
 	"Game.h"
 
-1510137541 c:\users\osama\desktop\oop project stuff\game\game\game.h
+1510316287 c:\users\osama\desktop\oop project stuff\game\game\game.h
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_mixer.h>
@@ -1543,7 +1543,7 @@
 1510032852 c:\users\osama\desktop\oop project stuff\game\game\steelbrick.h
 	"Brick.h"
 
-1510146217 c:\users\osama\desktop\oop project stuff\game\game\mobilebrick.h
+1510317768 c:\users\osama\desktop\oop project stuff\game\game\mobilebrick.h
 	"OneHitBrick.h"
 	"List.h"
 
@@ -1553,9 +1553,10 @@
 1509042402 c:\users\osama\desktop\oop project stuff\game\game\node.h
 	"Entity.h"
 
-1509564177 c:\users\osama\desktop\oop project stuff\game\game\paddle.h
+1510477429 c:\users\osama\desktop\oop project stuff\game\game\paddle.h
 	"Entity.h"
 	"Board.h"
+	"Bullet.h"
 
 1509776606 c:\users\osama\desktop\oop project stuff\game\game\mainmenu.h
 	<iostream>
@@ -1566,45 +1567,48 @@
 	"Entity.h"
 	"Button.h"
 
-1510146850 c:\users\osama\desktop\oop project stuff\game\game\ball.h
+1510398080 c:\users\osama\desktop\oop project stuff\game\game\ball.h
 	"Entity.h"
 	<math.h>
 	"Board.h"
 	<SDL.h>
+	"Paddle.h"
+	"Rect.h"
 
-1510157589 source:c:\users\osama\desktop\oop project stuff\game\game\game.cpp
+1510478010 source:c:\users\osama\desktop\oop project stuff\game\game\game.cpp
 	"Game.h"
 
-1510146217 source:c:\users\osama\desktop\oop project stuff\game\game\list.cpp
+1510338485 source:c:\users\osama\desktop\oop project stuff\game\game\list.cpp
 	"List.h"
 
 1509731389 source:c:\users\osama\desktop\oop project stuff\game\game\ltexture.cpp
 	"LTexture.h"
 
-1509739696 source:c:\users\osama\desktop\oop project stuff\game\game\main.cpp
+1510391446 source:c:\users\osama\desktop\oop project stuff\game\game\main.cpp
 	<iostream>
 	"Game.h"
 
-1510157795 source:c:\users\osama\desktop\oop project stuff\game\game\mainmenu.cpp
+1510316666 source:c:\users\osama\desktop\oop project stuff\game\game\mainmenu.cpp
 	"MainMenu.h"
 
-1510136295 source:c:\users\osama\desktop\oop project stuff\game\game\mobilebrick.cpp
+1510336422 source:c:\users\osama\desktop\oop project stuff\game\game\mobilebrick.cpp
 	"MobileBrick.h"
 
 1510048859 source:c:\users\osama\desktop\oop project stuff\game\game\onehitbrick.cpp
 	"OneHitBrick.h"
 
-1509815509 source:c:\users\osama\desktop\oop project stuff\game\game\paddle.cpp
+1510477900 source:c:\users\osama\desktop\oop project stuff\game\game\paddle.cpp
 	"Paddle.h"
 
 1509036966 source:c:\users\osama\desktop\oop project stuff\game\game\point.cpp
 	"Point.h"
 
-1509595947 source:c:\users\osama\desktop\oop project stuff\game\game\rect.cpp
+1510393989 source:c:\users\osama\desktop\oop project stuff\game\game\rect.cpp
 	"Rect.h"
 
-1508949488 c:\users\osama\desktop\oop project stuff\game\game\rect.h
+1510389836 c:\users\osama\desktop\oop project stuff\game\game\rect.h
 	"Point.h"
+	<SDL.h>
 
 1510048894 source:c:\users\osama\desktop\oop project stuff\game\game\steelbrick.cpp
 	"SteelBrick.h"
@@ -1618,69 +1622,69 @@
 1510048876 source:c:\users\osama\desktop\oop project stuff\game\game\twohitbrick.cpp
 	"TwoHitBrick.h"
 
-1510157293 source:c:\users\osama\desktop\oop project stuff\game\game\ball.cpp
+1510407771 source:c:\users\osama\desktop\oop project stuff\game\game\ball.cpp
 	"Ball.h"
 
-1510171084 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\ball.cpp
+1510204093 source:c:\users\hp-pc\desktop\game\game\ball.cpp
 	"Ball.h"
 
-1510170440 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\ball.h
+1510193650 c:\users\hp-pc\desktop\game\game\ball.h
 	"Entity.h"
 	<math.h>
 	"Board.h"
 	<SDL.h>
 
-1510146217 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\entity.h
+1510193017 c:\users\hp-pc\desktop\game\game\entity.h
 	"Point.h"
 	"LTexture.h"
 
-1509776610 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\point.h
+1509819810 c:\users\hp-pc\desktop\game\game\point.h
 	<iostream>
 
-1509731457 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\ltexture.h
+1509774657 c:\users\hp-pc\desktop\game\game\ltexture.h
 	<iostream>
 	<stdio.h>
 	<SDL.h>
 	<SDL_image.h>
 
-1510033613 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\board.h
+1510080413 c:\users\hp-pc\desktop\game\game\board.h
 	"Entity.h"
 
-1509776603 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\board.cpp
+1509819803 source:c:\users\hp-pc\desktop\game\game\board.cpp
 	"Board.h"
 
-1510135783 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\brick.cpp
+1510182583 source:c:\users\hp-pc\desktop\game\game\brick.cpp
 	"Brick.h"
 
-1510146217 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\brick.h
+1510193017 c:\users\hp-pc\desktop\game\game\brick.h
 	"Entity.h"
 	"Board.h"
 
-1510255741 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\button.cpp
+1509818237 source:c:\users\hp-pc\desktop\game\game\button.cpp
 	"Button.h"
 
-1509776605 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\button.h
+1509819805 c:\users\hp-pc\desktop\game\game\button.h
 	<map>
 	"Entity.h"
 	"Text.h"
 	"SDL.h"
 
-1509776609 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\text.h
+1509819809 c:\users\hp-pc\desktop\game\game\text.h
 	<map>
 	"Entity.h"
 	"SDL.h"
 
-1510135614 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\entity.cpp
+1510182414 source:c:\users\hp-pc\desktop\game\game\entity.cpp
 	"Entity.h"
 
-1510039384 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\fileio.cpp
+1510086184 source:c:\users\hp-pc\desktop\game\game\fileio.cpp
 	"FileIO.h"
 
-1509776608 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\fileio.h
+1509819808 c:\users\hp-pc\desktop\game\game\fileio.h
 	<fstream>
 	"Game.h"
 
-1510255854 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\game.h
+1510184341 c:\users\hp-pc\desktop\game\game\game.h
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_mixer.h>
@@ -1694,7 +1698,6 @@
 	"LTexture.h"
 	"Board.h"
 	"FileIO.h"
-	"string"
 	"OneHitBrick.h"
 	"TwoHitBrick.h"
 	"ThreeHitBrick.h"
@@ -1706,33 +1709,33 @@
 	"MainMenu.h"
 	"Ball.h"
 
-1510032629 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\onehitbrick.h
+1510079429 c:\users\hp-pc\desktop\game\game\onehitbrick.h
 	"Brick.h"
 
-1510032935 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\twohitbrick.h
+1510079735 c:\users\hp-pc\desktop\game\game\twohitbrick.h
 	"Brick.h"
 
-1510032905 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\threehitbrick.h
+1510079705 c:\users\hp-pc\desktop\game\game\threehitbrick.h
 	"Brick.h"
 
-1510032852 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\steelbrick.h
+1510079652 c:\users\hp-pc\desktop\game\game\steelbrick.h
 	"Brick.h"
 
-1510146217 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\mobilebrick.h
+1510193017 c:\users\hp-pc\desktop\game\game\mobilebrick.h
 	"OneHitBrick.h"
 	"List.h"
 
-1510132529 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\list.h
+1510179329 c:\users\hp-pc\desktop\game\game\list.h
 	"Node.h"
 
-1509042402 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\node.h
+1509085602 c:\users\hp-pc\desktop\game\game\node.h
 	"Entity.h"
 
-1509564177 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\paddle.h
+1510233845 c:\users\hp-pc\desktop\game\game\paddle.h
 	"Entity.h"
 	"Board.h"
 
-1509776606 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\mainmenu.h
+1509819806 c:\users\hp-pc\desktop\game\game\mainmenu.h
 	<iostream>
 	<SDL.h>
 	<SDL_image.h>
@@ -1741,49 +1744,240 @@
 	"Entity.h"
 	"Button.h"
 
-1510255854 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\game.cpp
+1510233894 source:c:\users\hp-pc\desktop\game\game\game.cpp
 	"Game.h"
 
-1510146217 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\list.cpp
+1510193017 source:c:\users\hp-pc\desktop\game\game\list.cpp
 	"List.h"
 
-1509731389 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\ltexture.cpp
+1509774589 source:c:\users\hp-pc\desktop\game\game\ltexture.cpp
 	"LTexture.h"
 
-1509739696 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\main.cpp
+1509782896 source:c:\users\hp-pc\desktop\game\game\main.cpp
 	<iostream>
 	"Game.h"
 
-1510255391 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\mainmenu.cpp
+1510204595 source:c:\users\hp-pc\desktop\game\game\mainmenu.cpp
 	"MainMenu.h"
 
-1510136295 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\mobilebrick.cpp
+1510183095 source:c:\users\hp-pc\desktop\game\game\mobilebrick.cpp
 	"MobileBrick.h"
 
-1510048859 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\onehitbrick.cpp
+1510095659 source:c:\users\hp-pc\desktop\game\game\onehitbrick.cpp
 	"OneHitBrick.h"
 
-1509815509 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\paddle.cpp
+1510255227 source:c:\users\hp-pc\desktop\game\game\paddle.cpp
 	"Paddle.h"
 
-1509036966 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\point.cpp
+1509080166 source:c:\users\hp-pc\desktop\game\game\point.cpp
 	"Point.h"
 
-1509595947 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\rect.cpp
+1509639147 source:c:\users\hp-pc\desktop\game\game\rect.cpp
 	"Rect.h"
 
-1508949488 c:\users\minhaj ahmed moin\downloads\game (3)\game\game\rect.h
+1508992688 c:\users\hp-pc\desktop\game\game\rect.h
 	"Point.h"
 
-1510048894 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\steelbrick.cpp
+1510095694 source:c:\users\hp-pc\desktop\game\game\steelbrick.cpp
 	"SteelBrick.h"
 
-1510204747 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\text.cpp
+1509820194 source:c:\users\hp-pc\desktop\game\game\text.cpp
 	"Text.h"
 
-1510048884 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\threehitbrick.cpp
+1510095684 source:c:\users\hp-pc\desktop\game\game\threehitbrick.cpp
 	"ThreeHitBrick.h"
 
-1510048876 source:c:\users\minhaj ahmed moin\downloads\game (3)\game\game\twohitbrick.cpp
+1510095676 source:c:\users\hp-pc\desktop\game\game\twohitbrick.cpp
 	"TwoHitBrick.h"
+
+1510234515 source:c:\users\hp-pc\desktop\game\game\bullet.cpp
+	"Bullet.h"
+
+1510234515 c:\users\hp-pc\desktop\game\game\bullet.h
+	"Smasher.h"
+
+1510234677 c:\users\hp-pc\desktop\game\game\smasher.h
+	"Entity.h"
+	"Board.h"
+
+1510255333 source:c:\users\hp-pc\desktop\game\game\smasher.cpp
+	"Smasher.h"
+
+1510157293 source:c:\users\osama\desktop\game\game\game\ball.cpp
+	"Ball.h"
+
+1510146850 c:\users\osama\desktop\game\game\game\ball.h
+	"Entity.h"
+	<math.h>
+	"Board.h"
+	<SDL.h>
+
+1510310317 c:\users\osama\desktop\game\game\game\entity.h
+	"Point.h"
+	"LTexture.h"
+
+1509776610 c:\users\osama\desktop\game\game\game\point.h
+	<iostream>
+
+1509731457 c:\users\osama\desktop\game\game\game\ltexture.h
+	<iostream>
+	<stdio.h>
+	<SDL.h>
+	<SDL_image.h>
+
+1510033613 c:\users\osama\desktop\game\game\game\board.h
+	"Entity.h"
+
+1509776603 source:c:\users\osama\desktop\game\game\game\board.cpp
+	"Board.h"
+
+1510135783 source:c:\users\osama\desktop\game\game\game\brick.cpp
+	"Brick.h"
+
+1510146217 c:\users\osama\desktop\game\game\game\brick.h
+	"Entity.h"
+	"Board.h"
+
+1509775037 source:c:\users\osama\desktop\game\game\game\button.cpp
+	"Button.h"
+
+1509776605 c:\users\osama\desktop\game\game\game\button.h
+	<map>
+	"Entity.h"
+	"Text.h"
+	"SDL.h"
+
+1509776609 c:\users\osama\desktop\game\game\game\text.h
+	<map>
+	"Entity.h"
+	"SDL.h"
+
+1510135614 source:c:\users\osama\desktop\game\game\game\entity.cpp
+	"Entity.h"
+
+1510039384 source:c:\users\osama\desktop\game\game\game\fileio.cpp
+	"FileIO.h"
+
+1509776608 c:\users\osama\desktop\game\game\game\fileio.h
+	<fstream>
+	"Game.h"
+
+1510316287 c:\users\osama\desktop\game\game\game\game.h
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<stdio.h>
+	<string>
+	<sstream>
+	<cstdlib>
+	<time.h>
+	<fstream>
+	<sstream>
+	"LTexture.h"
+	"Board.h"
+	"FileIO.h"
+	"OneHitBrick.h"
+	"TwoHitBrick.h"
+	"ThreeHitBrick.h"
+	"SteelBrick.h"
+	"MobileBrick.h"
+	"Point.h"
+	"List.h"
+	"Paddle.h"
+	"MainMenu.h"
+	"Ball.h"
+
+1510032629 c:\users\osama\desktop\game\game\game\onehitbrick.h
+	"Brick.h"
+
+1510032935 c:\users\osama\desktop\game\game\game\twohitbrick.h
+	"Brick.h"
+
+1510032905 c:\users\osama\desktop\game\game\game\threehitbrick.h
+	"Brick.h"
+
+1510032852 c:\users\osama\desktop\game\game\game\steelbrick.h
+	"Brick.h"
+
+1510317768 c:\users\osama\desktop\game\game\game\mobilebrick.h
+	"OneHitBrick.h"
+	"List.h"
+
+1510132529 c:\users\osama\desktop\game\game\game\list.h
+	"Node.h"
+
+1509042402 c:\users\osama\desktop\game\game\game\node.h
+	"Entity.h"
+
+1510303217 c:\users\osama\desktop\game\game\game\paddle.h
+	"Entity.h"
+	"Board.h"
+
+1509776606 c:\users\osama\desktop\game\game\game\mainmenu.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	<stack>
+	<vector>
+	"Entity.h"
+	"Button.h"
+
+1510316716 source:c:\users\osama\desktop\game\game\game\game.cpp
+	"Game.h"
+
+1510146217 source:c:\users\osama\desktop\game\game\game\list.cpp
+	"List.h"
+
+1509731389 source:c:\users\osama\desktop\game\game\game\ltexture.cpp
+	"LTexture.h"
+
+1509739696 source:c:\users\osama\desktop\game\game\game\main.cpp
+	<iostream>
+	"Game.h"
+
+1510316666 source:c:\users\osama\desktop\game\game\game\mainmenu.cpp
+	"MainMenu.h"
+
+1510317705 source:c:\users\osama\desktop\game\game\game\mobilebrick.cpp
+	"MobileBrick.h"
+
+1510048859 source:c:\users\osama\desktop\game\game\game\onehitbrick.cpp
+	"OneHitBrick.h"
+
+1510303973 source:c:\users\osama\desktop\game\game\game\paddle.cpp
+	"Paddle.h"
+
+1509036966 source:c:\users\osama\desktop\game\game\game\point.cpp
+	"Point.h"
+
+1509595947 source:c:\users\osama\desktop\game\game\game\rect.cpp
+	"Rect.h"
+
+1508949488 c:\users\osama\desktop\game\game\game\rect.h
+	"Point.h"
+
+1510048894 source:c:\users\osama\desktop\game\game\game\steelbrick.cpp
+	"SteelBrick.h"
+
+1509776994 source:c:\users\osama\desktop\game\game\game\text.cpp
+	"Text.h"
+
+1510048884 source:c:\users\osama\desktop\game\game\game\threehitbrick.cpp
+	"ThreeHitBrick.h"
+
+1510048876 source:c:\users\osama\desktop\game\game\game\twohitbrick.cpp
+	"TwoHitBrick.h"
+
+1510453907 c:\users\osama\desktop\oop project stuff\game\game\bullet.h
+	"Smasher.h"
+
+1510454058 c:\users\osama\desktop\oop project stuff\game\game\smasher.h
+	"Entity.h"
+	"Board.h"
+
+1510477582 source:c:\users\osama\desktop\oop project stuff\game\game\bullet.cpp
+	"Bullet.h"
+
+1510454068 source:c:\users\osama\desktop\oop project stuff\game\game\smasher.cpp
+	"Smasher.h"
 

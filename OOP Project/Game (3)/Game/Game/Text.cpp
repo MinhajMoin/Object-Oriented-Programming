@@ -14,14 +14,9 @@ Text::Text(string word,LTexture* image,Point pos):Entity(image,pos)
         SDL_Rect charRect = {377+(40*(i-13)),839,40,40};
         Characters.insert ( pair<char,SDL_Rect>((char)(i+97),charRect) );
     }
-    for (int i = 26; i < 36; i++ )
-    {
-        SDL_Rect charRect = {377+(40*(i-26)),880,40,40};
-        Characters.insert ( pair<char,SDL_Rect>((char)(i+22),charRect) );
-    }
     this->text = word;
-    this->height = Characters['a'].h;
-    this->width = word.length()*Characters['a'].w;
+    this->height = 40;
+    this->width = word.length()*40;
     color = 0;
 }
 
@@ -57,14 +52,10 @@ void Text::render(long int& frame, SDL_Renderer* gRenderer)
         {
             Char = (char)((int)text[i] + 32);
         }
-        else if ((int)text[i] >= 48 && (int)text[i] < 58)
-        {
-            Char = (char)((int)text[i]);
-        }
         SDL_Rect renderQuad = {Characters[Char].x,Characters[Char].y,Characters[Char].w,Characters[Char].h};
         if (color == 1 )
         {
-            renderQuad.y += 139;
+            renderQuad.y += 110;
         }
         spriteSheetTexture->render(pos.x-width/2+(i*40),pos.y-height/2,&renderQuad,0.0,NULL,SDL_FLIP_NONE,gRenderer);
     }

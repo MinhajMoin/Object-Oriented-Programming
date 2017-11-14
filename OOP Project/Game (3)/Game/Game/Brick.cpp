@@ -13,22 +13,13 @@ Brick::Brick(LTexture* image, Board* gameBoard, Point pos):Entity(image,pos),gam
         y=0;
         for(int j=FRAME0; j<NUM_BRICK_FRAMES; j++)
         {
-            spriteClips[i][j].x=x;
-            spriteClips[i][j].y=y;
-            spriteClips[i][j].w=width;
-            spriteClips[i][j].h=height;
+            spriteClips[i][j]= {x,y,width,height};
             y+=height;
         }
         x+=width;
     }
-
-    bounds.x=pos.x;
-    bounds.y=pos.y;
-    bounds.w=width;
-    bounds.h=height;
-
+    setBounds();
     color=rand()%(NUM_BRICK_COLORS-1);// Subtracting 1 since last brick is steel one, its color will be set separately
-
 }
 
 Brick::~Brick()
@@ -38,8 +29,6 @@ Brick::~Brick()
 
 void Brick::incrementDmg()
 {
-    //std::cout << brickDamage << " " << brickHealth << std::endl;
-    //std::cout << alive << std::endl;
     if(brickHealth==10)
     {
         return;//condition for steel brick, should die only if hit by bullet or missile

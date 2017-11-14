@@ -1,10 +1,10 @@
 #ifndef RECT_H
 #define RECT_H
 #include "Point.h"
-
+#include <SDL.h>
 struct Rect
 {
-    Rect(Point,Point,Point,Point);
+    Rect(SDL_Rect&);
     Point topLeft;
     Point topRight;
     Point botLeft;
@@ -12,7 +12,9 @@ struct Rect
     int width;
     int height;
     bool isInside(Point&);
-    bool isIntersecting(Rect&);
+    int isColliding(Rect&,float,float);
+    int isInside(Rect&);
+    enum COLLISIONS{NONE,RIGHT,TOP,LEFT,DOWN};
 };
 
 #endif // RECT_H

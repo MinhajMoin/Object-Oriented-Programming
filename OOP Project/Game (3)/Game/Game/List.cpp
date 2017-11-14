@@ -190,7 +190,7 @@ void List::move()
     Node* tmp=start;
     while(tmp)
     {
-        if(tmp->ent->getType()==tmp->ent->MOBILEBRICK)//check if the brick is of type mobile brick
+        if(tmp->ent->getType()==tmp->ent->MOBILEBRICK || tmp->ent->getType()==tmp->ent->PADDLE || tmp->ent->getType()==tmp->ent->BALL)//check if the entity is movable
             tmp->ent->move(this);
         tmp=tmp->next;
     }

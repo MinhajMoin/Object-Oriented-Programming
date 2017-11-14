@@ -36,8 +36,8 @@ bool Game::init()
             printf( "Warning: Linear texture filtering not enabled!" );
         }
 
-        //Create window
-        gWindow = SDL_CreateWindow( "BRICRUMBLE!", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_FULLSCREEN );
+        //Create windows
+        gWindow = SDL_CreateWindow( "BRICRUMBLE!", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
         if( gWindow == NULL )
         {
             printf( "Window could not be created! SDL Error: %s\n", SDL_GetError() );
@@ -73,7 +73,8 @@ bool Game::init()
     }
     if(loadMedia())
     {
-        gameLoop(); //instead of going into the gameloop directly, go to the menu
+        gameLoop();  //instead of going into the gameloop directly, go to the menu
+        //testLoop();
     }
 
     return success;
@@ -86,9 +87,8 @@ bool Game::loadMedia()
     //Load sprite sheet texture
 //     UN COMMENT THIS
     if( !gSpriteSheetTexture.loadFromFile( "Images/spritesheet.png", gRenderer,0,255,255  )
-            || !bgTexture.loadFromFile("Images/background5.png",gRenderer,0,255,255)
-            || !mainMenuTexture.loadFromFile("Images/Menu 1.png",gRenderer,255,0,0)
-            || !splashScreen.loadFromFile("Images/Splash.jpg",gRenderer,0,0,0)) //change this to the sprite sheet to be loaded
+            || !bgTexture.loadFromFile("Images/background.png",gRenderer,0,255,255)
+            || !mainMenuTexture.loadFromFile("Images/Menu 1.png",gRenderer,255,0,0) ) //change this to the sprite sheet to be loaded
     {
         printf( "Failed to load sprite sheet texture!\n" );
         success = false;
@@ -116,44 +116,21 @@ void Game::close()
     Mix_Quit();
 }
 
-bool Game::showSplash(long int& frame)
-{
-    if ((frame*2)%256 == 252) {return true;}
-    SDL_Rect splashRect = {0,0,SCREEN_WIDTH,SCREEN_HEIGHT};
-    splashScreen.setAlpha((frame*2)%256);
-    splashScreen.render(0,0,&splashRect,0.0,NULL,SDL_FLIP_NONE,gRenderer);
-    return false;
-}
-
-bool Game::hideSplash(long int& frame)
-{
-    if (255 - (frame*2)%256 == 1) {return true;}
-    SDL_Rect splashRect = {0,0,SCREEN_WIDTH,SCREEN_HEIGHT};
-    splashScreen.setAlpha(255 -(frame*2)%256);
-    splashScreen.render(0,0,&splashRect,0.0,NULL,SDL_FLIP_NONE,gRenderer);
-    return false;
-}
-
-void Game::Splash(long int& frame)
-{
-    SDL_Rect splashRect = {0,0,SCREEN_WIDTH,SCREEN_HEIGHT};
-    splashScreen.setAlpha(255);
-    splashScreen.render(0,0,&splashRect,0.0,NULL,SDL_FLIP_NONE,gRenderer);
-}
-
 void Game::gameLoop()
 {
-    bool splashLife = true;
     mainMenu = new MainMenu(&mainMenuTexture);
     mainMenu->setDimensions(SCREEN_WIDTH,SCREEN_HEIGHT);
     //setting rect for background
     SDL_Rect bgRect = {0,0,SCREEN_WIDTH,SCREEN_HEIGHT};
     gameBoard=new Board(&gSpriteSheetTexture);
     gameBoard->setDimensions(SCREEN_WIDTH,SCREEN_HEIGHT);
-    levelLoader();
-    //levelLoader("Levels/lev2.txt");
-    Paddle pad(&gSpriteSheetTexture,gameBoard);
-    Ball ball(&gSpriteSheetTexture,gameBoard);
+    //levelLoader();
+    levelLoader("Levels/lev2.txt");
+    Paddle* pad=new Paddle(&gSpriteSheetTexture,gameBoard);
+    Ball* ball=new Ball(&gSpriteSheetTexture,gameBoard,pad);
+    playerEnt.append(pad);
+    playerEnt.append(ball);
+    //ball.stickToPaddle();
     //board loader
     //with different brick classes
 
@@ -182,68 +159,70 @@ void Game::gameLoop()
     SDL_Event e;
     bool quit=false;
     long int frame=0;
-    int delay = 1;
-    bool ballMoving = false;
-    bool show = true;
-    bool hide = false;
-    Uint32 firstTick = SDL_GetTicks();
-    Uint32 splTick = 0;
     while( !quit )                          //Game loop
     {
-        while( SDL_PollEvent( &e ) != 0)   //Handle events on queue
+        while( SDL_PollEvent( &e ) != 0 )   //Handle events on queue
         {
-            if (mainMenu->getAlive() && !splashLife) mainMenu->handleEvents(e);
-            ball.handleEvents(e);
+            if(mainMenu->getAlive())
+                mainMenu->handleEvents(e);
             //User requests quit
             if( e.type == SDL_QUIT || mainMenu->getOption() == MainMenu::QUIT )
             {
                 quit = true;
             }
+            if (e.type==SDL_MOUSEBUTTONDOWN)// && !mainMenu->getAlive())
+            {
+                if (e.button.button == SDL_BUTTON_LEFT && !mainMenu->getAlive())
+                    if(ball->isStuck())
+                    {
+                        ball->setStick(false);
+                    }
+            }
             if (mainMenu->getOption() == MainMenu::PLAY)
             {
-                mainMenu->alive = false;
+                mainMenu->setAlive(false);
             }
+            if (e.type == SDL_KEYDOWN)
+            {
+                switch( e.key.keysym.sym )
+                {
+                case SDLK_1:
+                    ball->setBallType(1);
+                    break;
+                case SDLK_2:
+                    ball->setBallType(2);
+                    break;
+                case SDLK_3:
+                    ball->setBallType(3);
+                    break;
+                case SDLK_4:
+                    ball->setBallType(0);
+                    break;
+                case SDLK_5:
+                    pad->fireUp();
+                    break;
+                case SDLK_6:
+                    pad->turtleDown();
+                    break;
+                case SDLK_7:
+                    pad->restoreMode();
+                    break;
+                case SDLK_8:
+                    pad->diminish();
+                    break;
+                case SDLK_9:
+                    pad->restoreSize();
+                    break;
+                case SDLK_0:
+                    pad->enlarge();
+                    break;
+                }
+            }
+        pad->handleEvents(e);
         }
-
         frame++;
-        stringstream cc;
-        cc << "BRICUMBLE | Frame = " << frame;
-        SDL_SetWindowTitle(gWindow,cc.str().c_str());
-        SDL_SetRenderDrawColor( gRenderer, 0, 0, 0, 255 );    //Clear screen
+        SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );    //Clear screen
         SDL_RenderClear( gRenderer );
-        //Show the splash screen
-        if (splashLife)
-        {
-            bool stay;
-            if (show)
-            {
-                stay = showSplash(frame);
-                if (stay)
-                {
-                    splTick = SDL_GetTicks();
-                }
-            }
-            if (stay)
-            {
-                show = false;
-                Splash(frame);
-                if ((SDL_GetTicks()-splTick)/1000 >= delay && (frame*2)%256 == 0)
-                {
-                    hide = true;
-                    stay = false;
-                }
-            }
-            if (hide)
-            {
-                if (hideSplash(frame))
-                {
-                    splashLife = false;
-                }
-            }
-        }
-
-
-
         if (!mainMenu->getAlive())
         {
             //Rendering background
@@ -253,15 +232,8 @@ void Game::gameLoop()
             //Rendering Game Board (boundaries)
             gameBoard->render(frame,gRenderer);
             worldEnt.render(frame,gRenderer);
-
-            if (!ballMoving)  ballMoving=ball.startMove(e);
-            else ball.move(90);
-            ball.render(frame,gRenderer);
-
-            pad.render(frame,gRenderer);
-            pad.setMouseX(e);
-            //copy.render(frame,gRenderer);
-
+            playerEnt.render(frame,gRenderer);
+            playerEnt.move();
 
             /* BLOCK FOR SEEING DESTROY ANIMATION FOR BRICKS*/
             if(worldEnt.size()>0)
@@ -272,8 +244,10 @@ void Game::gameLoop()
 
                 //simulating a hit
                 //worldEnt.end->ent->incrementDmg(); //IMP CONDITION
-                worldEnt.start->ent->incrementDmg(); //IMP CONDITION
+                //worldEnt.start->ent->incrementDmg(); //IMP CONDITION
                 worldEnt.move();//for moving objects that will move
+                collisionHandler(ball,&worldEnt);
+                collisionHandler(ball,pad);
                 //or
                 //simulating death
                 //worldEnt.start->ent->setAlive(0);
@@ -281,20 +255,20 @@ void Game::gameLoop()
             if(frame%60==0)
             {
                 worldEnt.clean();//bricks will get deallocaated after every 60 frames
-                std::cout << worldEnt.size() << std::endl;
+                //std::cout << worldEnt.size() << std::endl;
             }
         }
-        else if (!splashLife)
+        else
         {
             mainMenu->render(frame,gRenderer);
         }
         SDL_RenderPresent(gRenderer);
     }
+    //paddle=NULL;ball=NULL;
     delete gameBoard;
     close();
-
-
 }
+
 void Game::levelLoader(string level)
 {
     static int levelNum=1;
@@ -327,5 +301,148 @@ void Game::levelLoader(string level)
             cout << "Error loading default level file." << endl;
             exit(-1);
         }
+    }
+}
+
+void Game::testLoop()///ONLY FOR TESTING, DELETE AFTER COMPLETION
+{
+    SDL_Rect bgRect = {0,0,SCREEN_WIDTH,SCREEN_HEIGHT};
+    gameBoard=new Board(&gSpriteSheetTexture);
+    gameBoard->setDimensions(SCREEN_WIDTH,SCREEN_HEIGHT);
+    SDL_Event e;
+
+    //LOADING LEVEL
+
+    const int offsetX=2;//can be corrected for all resolutions with a little fitting, CORRECT THIS
+    const int offsetY=2;
+
+    Point spawnPoint(gameBoard->bounds.x + offsetX,gameBoard->bounds.y + offsetY);//offset of 2 for 1024 added to correct spawn points
+    Brick* b = NULL;
+
+    b=new OneHitBrick(&gSpriteSheetTexture,gameBoard,spawnPoint);
+    worldEnt.append(b);
+    spawnPoint++;
+
+    b=new TwoHitBrick(&gSpriteSheetTexture,gameBoard,spawnPoint);
+    worldEnt.append(b);
+    spawnPoint++;
+
+
+    b=new ThreeHitBrick(&gSpriteSheetTexture,gameBoard,spawnPoint);
+    worldEnt.append(b);
+    ++spawnPoint;
+
+    b=new SteelBrick(&gSpriteSheetTexture,gameBoard,spawnPoint);
+    worldEnt.append(b);
+
+
+    //TEST HITS
+    bool quit=false;
+    long int frame=0;
+    bool ballMoving = false;
+    while(!quit)
+    {
+        while( SDL_PollEvent( &e ) != 0 )
+        {
+            if( e.type == SDL_QUIT)
+            {
+                quit = true;
+            }
+            SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );    //Clear screen
+            SDL_RenderClear( gRenderer );
+            bgTexture.render(0,0,&bgRect,0,NULL,SDL_FLIP_NONE,gRenderer);
+            //Rendering Game Board (boundaries)
+            gameBoard->render(frame,gRenderer);
+
+            worldEnt.render(frame,gRenderer);
+            SDL_RenderPresent(gRenderer);
+
+            if(frame++ % 15==0)
+            {
+                worldEnt.start->ent->incrementDmg();
+                worldEnt.clean();
+            }
+
+        }
+    }
+}
+
+
+void Game::collisionHandler(Entity* ent1,Entity* ent2) //For handling ball-brick collisions and also ball-pad collisions
+{
+    //BALL-BRICK COLLISIONS
+    if (ent1->getType() == ent1->ENTITIES::BALL && ent2->getType() != ent1->ENTITIES::PADDLE && ent2->getAlive()!=0)
+    {
+        SDL_Rect ballCopy=ent1->getBounds();
+        SDL_Rect brickCopy=ent2->getBounds();
+        Rect ball=ballCopy;
+        Rect brick=brickCopy;
+        int collisionType=brick.isColliding(ball,ent1->getDX(),ent1->getDY());
+        if (collisionType==ball.COLLISIONS::NONE)
+        {
+            return;
+        }
+        else //A Ball brick collision has been detected
+        {
+            ent2->incrementDmg();//increase damage on the brick
+            //Setting bounce direction of the ball
+            if(collisionType==ball.COLLISIONS::DOWN || collisionType==ball.COLLISIONS::TOP)
+            {
+                ent1->setDir(ent1->getDX(),ent1->getDY()*-1);
+                ent1->move();
+            }
+            else if(collisionType==ball.COLLISIONS::LEFT || collisionType==ball.COLLISIONS::RIGHT)
+            {
+                ent1->setDir(ent1->getDX()*-1,ent1->getDY());
+                ent1->move();
+            }
+        }
+    }
+    //BALL-PADDLE COLLISIONS
+    else if (ent1->getType() == ent1->ENTITIES::BALL && ent2->getType() == ent1->ENTITIES::PADDLE)// && ent2->getAlive()!=0)
+    {
+        //BALL Bounce angle is independent of the direction at which it hits the paddle
+        SDL_Rect ballCopy=ent1->getBounds();
+        SDL_Rect paddleCopy=ent2->getBounds();
+        Rect ball=ballCopy;
+        Rect paddle=paddleCopy;
+        int collisionType=paddle.isColliding(ball,ent1->getDX(),ent1->getDY());
+        if(paddle.isColliding(ball,ent1->getDX(),ent1->getDY()))
+        {
+            if(collisionType==ball.COLLISIONS::TOP)
+            {
+                //float ballcenterX=ball.topLeft.x + ball
+                int hitPosX = ball.botLeft.x + ball.width/2; //x position of the ball at which it hit the pad
+
+                //hitPosX -= ent2->getWidth();
+                if (hitPosX < 0)
+                {
+                    hitPosX = 0;
+                }
+                else if (hitPosX > ent2->getWidth())
+                {
+                    hitPosX = ent2->getWidth();
+                }
+
+                // Everything to the left of the center of the paddle is reflected to the left
+                // while everything right of the center is reflected to the right
+                hitPosX -= ent2->getWidth() / 2.0f;
+                ent1->setDir(2.0f*(hitPosX/(ent2->getWidth()/2.0f)),-1);
+            }
+            else if (collisionType!=ball.COLLISIONS::NONE)
+            {
+                ent1->stickToPaddle();
+            }
+        }
+    }
+}
+
+void Game::collisionHandler(Entity* ent1,List* worldEnt)
+{
+    Node* tmp=worldEnt->start;
+    while(tmp)
+    {
+        collisionHandler(ent1,tmp->ent);
+        tmp=tmp->next;
     }
 }

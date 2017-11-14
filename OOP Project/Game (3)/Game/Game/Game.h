@@ -13,8 +13,6 @@
 #include "LTexture.h"
 #include "Board.h"
 #include "FileIO.h"
-#include "string"
-//#include "Brick.h"
 #include "OneHitBrick.h"
 #include "TwoHitBrick.h"
 #include "ThreeHitBrick.h"
@@ -35,15 +33,12 @@ public:
     bool loadMedia();
     void close();
     void gameLoop();
+    void testLoop();
     void collisionHandler(Entity*,Entity*);
     void collisionHandler(Entity*,List*);
-    bool showSplash(long int& frame);
-    bool hideSplash(long int& frame);
-    void Splash(long int& frame);
     void levelLoader(string = "");
     List playerEnt;
     List worldEnt;
-
 protected:
     //The window we'll be rendering to
     SDL_Window* gWindow = NULL;
@@ -53,8 +48,6 @@ protected:
     Board* gameBoard=NULL;
     //The Main Menu
     MainMenu* mainMenu = NULL;
-    //Texture for Splash Screen
-    LTexture splashScreen;
 
 private:
     const int SCREEN_WIDTH = 1024;
