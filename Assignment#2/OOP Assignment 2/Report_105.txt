@@ -1,0 +1,4 @@
+Room Number : 105
+Phone Number : 0105
+Occupancy : 2
+

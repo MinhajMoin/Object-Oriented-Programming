@@ -1,0 +1,794 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Hotel Management Simulation Log
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Simulation Ran For 2 Days
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Hotel Check-Ins
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Room No. 101 has been Booked for Guest No.0
+
+ROOM INFORMATION :
+Room No : 101
+Floor No : 1
+Phone No : 0101
+Occupancy : 4
+
+BOOKING INFORMATION : 
+Booking Date : 17/02/2018
+Booking Time : 22:47:07
+Booked for Duration : 4 Days
+Rent : 6400
+
+GUEST INFORMATION :
+Name : Julia Hayes
+CNIC : 4056615236
+Birthday : 01/30/1964
+
+Name : Ivan Campbell
+CNIC : 4973300629
+Birthday : 12/15/1961
+
+Name : Caroline Burke
+CNIC : 1202737456
+Birthday : 12/28/1953
+
+Name : Delia Williams
+CNIC : 7332497969
+Birthday : 06/02/1973
+
+Refrigerator Status : 
+1) Fanta 200 ml :Full
+2) Sprite 250 ml :Full
+3) Sprite 250 ml :Full
+4) Fanta 250 ml :Full
+5) Sprite 200 ml :Full
+6) Sprite 250 ml :Full
+7) Fanta 200 ml :Full
+8) Pepsi 300 ml :Full
+9) Fanta 200 ml :Full
+10) Sprite 250 ml :Full
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Room No. 103 has been Booked for Guest No.1
+
+ROOM INFORMATION :
+Room No : 103
+Floor No : 1
+Phone No : 0103
+Occupancy : 2
+
+BOOKING INFORMATION : 
+Booking Date : 17/02/2018
+Booking Time : 06:06:11
+Booked for Duration : 1 Days
+Rent : 800
+
+GUEST INFORMATION :
+Name : Matilda Poole
+CNIC : 1088977065
+Birthday : 09/25/1999
+
+Name : Rebecca Ortiz
+CNIC : 5595511975
+Birthday : 09/07/1977
+
+Refrigerator Status : 
+1) Pepsi 250 ml :Full
+2) Fanta 300 ml :Full
+3) Pepsi 300 ml :Full
+4) Fanta 200 ml :Full
+5) Pepsi 200 ml :Full
+6) Pepsi 200 ml :Full
+7) Pepsi 200 ml :Full
+8) Pepsi 250 ml :Full
+9) Fanta 200 ml :Full
+10) Fanta 250 ml :Full
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Room No. 104 has been Booked for Guest No.2
+
+ROOM INFORMATION :
+Room No : 104
+Floor No : 1
+Phone No : 0104
+Occupancy : 2
+
+BOOKING INFORMATION : 
+Booking Date : 17/02/2018
+Booking Time : 23:55:47
+Booked for Duration : 3 Days
+Rent : 2400
+
+GUEST INFORMATION :
+Name : Derek Roberson
+CNIC : 9159679494
+Birthday : 04/23/1985
+
+Name : Isaac Cruz
+CNIC : 8813228674
+Birthday : 12/15/1958
+
+Refrigerator Status : 
+1) Pepsi 250 ml :Full
+2) Sprite 250 ml :Full
+3) Pepsi 200 ml :Full
+4) Pepsi 300 ml :Full
+5) Sprite 200 ml :Full
+6) Fanta 300 ml :Full
+7) Pepsi 300 ml :Full
+8) Sprite 200 ml :Full
+9) Fanta 200 ml :Full
+10) Pepsi 300 ml :Full
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Room No. 105 has been Booked for Guest No.3
+
+ROOM INFORMATION :
+Room No : 105
+Floor No : 1
+Phone No : 0105
+Occupancy : 2
+
+BOOKING INFORMATION : 
+Booking Date : 17/02/2018
+Booking Time : 09:27:49
+Booked for Duration : 7 Days
+Rent : 5600
+
+GUEST INFORMATION :
+Name : Marion McGuire
+CNIC : 6384109891
+Birthday : 12/18/1966
+
+Name : Dean Castillo
+CNIC : 0062910670
+Birthday : 06/20/1992
+
+Refrigerator Status : 
+1) Sprite 250 ml :Full
+2) Sprite 200 ml :Full
+3) Sprite 250 ml :Full
+4) Sprite 250 ml :Full
+5) Pepsi 300 ml :Full
+6) Pepsi 250 ml :Full
+7) Sprite 250 ml :Full
+8) Pepsi 200 ml :Full
+9) Pepsi 300 ml :Full
+10) Fanta 200 ml :Full
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Room No. 205 has been Booked for Guest No.4
+
+ROOM INFORMATION :
+Room No : 205
+Floor No : 2
+Phone No : 0205
+Occupancy : 5
+
+BOOKING INFORMATION : 
+Booking Date : 17/02/2018
+Booking Time : 08:27:21
+Booked for Duration : 10 Days
+Rent : 20000
+
+GUEST INFORMATION :
+Name : Larry King
+CNIC : 4002444294
+Birthday : 05/30/1975
+
+Name : Emily Vega
+CNIC : 9035680875
+Birthday : 12/27/1974
+
+Name : Augusta Williams
+CNIC : 1344770554
+Birthday : 02/03/1954
+
+Name : Hulda Becker
+CNIC : 0153223438
+Birthday : 11/06/1991
+
+Name : Alice Cooper
+CNIC : 7923435967
+Birthday : 07/12/1989
+
+Refrigerator Status : 
+1) Fanta 250 ml :Full
+2) Sprite 250 ml :Full
+3) Pepsi 300 ml :Full
+4) Fanta 200 ml :Full
+5) Pepsi 300 ml :Full
+6) Sprite 250 ml :Full
+7) Pepsi 200 ml :Full
+8) Fanta 300 ml :Full
+9) Pepsi 200 ml :Full
+10) Pepsi 250 ml :Full
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Room No. 102 has been Booked for Guest No.5
+
+ROOM INFORMATION :
+Room No : 102
+Floor No : 1
+Phone No : 0102
+Occupancy : 4
+
+BOOKING INFORMATION : 
+Booking Date : 17/02/2018
+Booking Time : 14:00:44
+Booked for Duration : 1 Days
+Rent : 1600
+
+GUEST INFORMATION :
+Name : James Hines
+CNIC : 5521106989
+Birthday : 05/07/1985
+
+Name : Lily Hunter
+CNIC : 6733446179
+Birthday : 08/20/1962
+
+Name : Rosetta Perkins
+CNIC : 5684637666
+Birthday : 02/05/1954
+
+Name : Edward Owens
+CNIC : 2812687346
+Birthday : 09/18/1966
+
+Refrigerator Status : 
+1) Fanta 250 ml :Full
+2) Fanta 300 ml :Full
+3) Fanta 250 ml :Full
+4) Fanta 200 ml :Full
+5) Pepsi 200 ml :Full
+6) Fanta 200 ml :Full
+7) Fanta 250 ml :Full
+8) Fanta 300 ml :Full
+9) Fanta 250 ml :Full
+10) Pepsi 300 ml :Full
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Room No. 107 has been Booked for Guest No.6
+
+ROOM INFORMATION :
+Room No : 107
+Floor No : 1
+Phone No : 0107
+Occupancy : 2
+
+BOOKING INFORMATION : 
+Booking Date : 17/02/2018
+Booking Time : 04:28:14
+Booked for Duration : 2 Days
+Rent : 1600
+
+GUEST INFORMATION :
+Name : Victoria Little
+CNIC : 4296378289
+Birthday : 11/26/1952
+
+Name : Donald Barnes
+CNIC : 9056046471
+Birthday : 11/17/1956
+
+Refrigerator Status : 
+1) Pepsi 200 ml :Full
+2) Sprite 300 ml :Full
+3) Sprite 300 ml :Full
+4) Pepsi 250 ml :Full
+5) Fanta 200 ml :Full
+6) Pepsi 300 ml :Full
+7) Fanta 250 ml :Full
+8) Pepsi 300 ml :Full
+9) Sprite 300 ml :Full
+10) Sprite 300 ml :Full
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Room No. 106 has been Booked for Guest No.0
+
+ROOM INFORMATION :
+Room No : 106
+Floor No : 1
+Phone No : 0106
+Occupancy : 4
+
+BOOKING INFORMATION : 
+Booking Date : 18/02/2018
+Booking Time : 21:53:25
+Booked for Duration : 2 Days
+Rent : 3200
+
+GUEST INFORMATION :
+Name : Richard Collier
+CNIC : 1080131632
+Birthday : 09/01/1983
+
+Name : Ollie Morrison
+CNIC : 8776120391
+Birthday : 06/06/1979
+
+Name : Chris Nash
+CNIC : 1488849234
+Birthday : 12/20/1980
+
+Name : Derek Burgess
+CNIC : 5175027995
+Birthday : 02/24/1963
+
+Refrigerator Status : 
+1) Sprite 200 ml :Full
+2) Fanta 250 ml :Full
+3) Fanta 300 ml :Full
+4) Fanta 250 ml :Full
+5) Fanta 200 ml :Full
+6) Fanta 300 ml :Full
+7) Sprite 300 ml :Full
+8) Sprite 200 ml :Full
+9) Pepsi 200 ml :Full
+10) Sprite 200 ml :Full
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Room No. 202 has been Booked for Guest No.1
+
+ROOM INFORMATION :
+Room No : 202
+Floor No : 2
+Phone No : 0202
+Occupancy : 4
+
+BOOKING INFORMATION : 
+Booking Date : 18/02/2018
+Booking Time : 06:07:34
+Booked for Duration : 5 Days
+Rent : 8000
+
+GUEST INFORMATION :
+Name : Callie Curtis
+CNIC : 3833386897
+Birthday : 12/05/1963
+
+Name : Richard Collier
+CNIC : 1080131632
+Birthday : 09/01/1983
+
+Name : Augusta Fitzgerald
+CNIC : 4719794027
+Birthday : 02/20/1969
+
+Name : Adam Gilbert
+CNIC : 8519186193
+Birthday : 10/01/1993
+
+Refrigerator Status : 
+1) Fanta 300 ml :Full
+2) Pepsi 250 ml :Full
+3) Pepsi 250 ml :Full
+4) Fanta 200 ml :Full
+5) Pepsi 200 ml :Full
+6) Sprite 200 ml :Full
+7) Pepsi 250 ml :Full
+8) Sprite 200 ml :Full
+9) Sprite 250 ml :Full
+10) Pepsi 250 ml :Full
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Room No. 109 has been Booked for Guest No.2
+
+ROOM INFORMATION :
+Room No : 109
+Floor No : 1
+Phone No : 0109
+Occupancy : 3
+
+BOOKING INFORMATION : 
+Booking Date : 18/02/2018
+Booking Time : 18:19:19
+Booked for Duration : 6 Days
+Rent : 7200
+
+GUEST INFORMATION :
+Name : Bryan Burns
+CNIC : 8141137464
+Birthday : 04/07/1965
+
+Name : Tillie Walker
+CNIC : 7196121787
+Birthday : 04/17/1996
+
+Name : Pearl Lopez
+CNIC : 0417110542
+Birthday : 03/23/1976
+
+Refrigerator Status : 
+1) Fanta 250 ml :Full
+2) Sprite 300 ml :Full
+3) Sprite 250 ml :Full
+4) Sprite 250 ml :Full
+5) Sprite 300 ml :Full
+6) Sprite 250 ml :Full
+7) Fanta 200 ml :Full
+8) Fanta 250 ml :Full
+9) Sprite 250 ml :Full
+10) Sprite 300 ml :Full
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Room No. 203 has been Booked for Guest No.3
+
+ROOM INFORMATION :
+Room No : 203
+Floor No : 2
+Phone No : 0203
+Occupancy : 4
+
+BOOKING INFORMATION : 
+Booking Date : 18/02/2018
+Booking Time : 20:10:27
+Booked for Duration : 6 Days
+Rent : 9600
+
+GUEST INFORMATION :
+Name : Caroline Burke
+CNIC : 1202737456
+Birthday : 12/28/1953
+
+Name : Bruce Harris
+CNIC : 5382674725
+Birthday : 08/14/1986
+
+Name : Jane Black
+CNIC : 8473220719
+Birthday : 02/25/1962
+
+Name : Jeanette Adkins
+CNIC : 9645084314
+Birthday : 04/03/1978
+
+Refrigerator Status : 
+1) Fanta 300 ml :Full
+2) Fanta 250 ml :Full
+3) Fanta 200 ml :Full
+4) Pepsi 200 ml :Full
+5) Pepsi 250 ml :Full
+6) Fanta 250 ml :Full
+7) Fanta 250 ml :Full
+8) Fanta 200 ml :Full
+9) Sprite 200 ml :Full
+10) Pepsi 250 ml :Full
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Room No. 208 has been Booked for Guest No.4
+
+ROOM INFORMATION :
+Room No : 208
+Floor No : 2
+Phone No : 0208
+Occupancy : 5
+
+BOOKING INFORMATION : 
+Booking Date : 18/02/2018
+Booking Time : 07:59:38
+Booked for Duration : 6 Days
+Rent : 12000
+
+GUEST INFORMATION :
+Name : Randall Banks
+CNIC : 9558126226
+Birthday : 06/24/1957
+
+Name : Edward Owens
+CNIC : 2812687346
+Birthday : 09/18/1966
+
+Name : Dennis Riley
+CNIC : 2187530466
+Birthday : 02/05/1952
+
+Name : Mittie Stokes
+CNIC : 2267617912
+Birthday : 03/26/1963
+
+Name : Eula Willis
+CNIC : 7945743903
+Birthday : 01/23/1980
+
+Refrigerator Status : 
+1) Pepsi 300 ml :Full
+2) Pepsi 200 ml :Full
+3) Fanta 200 ml :Full
+4) Pepsi 300 ml :Full
+5) Sprite 300 ml :Full
+6) Pepsi 200 ml :Full
+7) Sprite 200 ml :Full
+8) Sprite 300 ml :Full
+9) Sprite 300 ml :Full
+10) Sprite 250 ml :Full
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Room No. 209 has been Booked for Guest No.5
+
+ROOM INFORMATION :
+Room No : 209
+Floor No : 2
+Phone No : 0209
+Occupancy : 5
+
+BOOKING INFORMATION : 
+Booking Date : 18/02/2018
+Booking Time : 00:23:03
+Booked for Duration : 3 Days
+Rent : 6000
+
+GUEST INFORMATION :
+Name : Irene Cox
+CNIC : 8053988006
+Birthday : 02/14/1984
+
+Name : Kevin Knight
+CNIC : 4291518846
+Birthday : 01/02/1962
+
+Name : Linnie Russell
+CNIC : 7745348593
+Birthday : 03/15/1994
+
+Name : Julia Hayes
+CNIC : 4056615236
+Birthday : 01/30/1964
+
+Name : Bruce Harris
+CNIC : 5382674725
+Birthday : 08/14/1986
+
+Refrigerator Status : 
+1) Sprite 200 ml :Full
+2) Sprite 250 ml :Full
+3) Sprite 250 ml :Full
+4) Sprite 250 ml :Full
+5) Pepsi 200 ml :Full
+6) Pepsi 250 ml :Full
+7) Pepsi 250 ml :Full
+8) Fanta 300 ml :Full
+9) Sprite 250 ml :Full
+10) Sprite 250 ml :Full
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Room No. 108 has been Booked for Guest No.6
+
+ROOM INFORMATION :
+Room No : 108
+Floor No : 1
+Phone No : 0108
+Occupancy : 2
+
+BOOKING INFORMATION : 
+Booking Date : 18/02/2018
+Booking Time : 15:57:10
+Booked for Duration : 4 Days
+Rent : 3200
+
+GUEST INFORMATION :
+Name : Rosetta Perkins
+CNIC : 5684637666
+Birthday : 02/05/1954
+
+Name : Rosetta Collier
+CNIC : 1897816223
+Birthday : 09/28/1987
+
+Refrigerator Status : 
+1) Sprite 300 ml :Full
+2) Pepsi 250 ml :Full
+3) Sprite 250 ml :Full
+4) Sprite 300 ml :Full
+5) Sprite 250 ml :Full
+6) Pepsi 250 ml :Full
+7) Fanta 200 ml :Full
+8) Pepsi 250 ml :Full
+9) Sprite 250 ml :Full
+10) Fanta 200 ml :Full
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Room No. 110 has been Booked for Guest No.7
+
+ROOM INFORMATION :
+Room No : 110
+Floor No : 1
+Phone No : 0110
+Occupancy : 3
+
+BOOKING INFORMATION : 
+Booking Date : 18/02/2018
+Booking Time : 23:23:37
+Booked for Duration : 8 Days
+Rent : 9600
+
+GUEST INFORMATION :
+Name : Essie Barnett
+CNIC : 3651016395
+Birthday : 09/20/1994
+
+Name : Katharine Kelley
+CNIC : 7263500422
+Birthday : 02/22/1964
+
+Name : Isabelle Parks
+CNIC : 9992771979
+Birthday : 01/26/1983
+
+Refrigerator Status : 
+1) Fanta 250 ml :Full
+2) Sprite 250 ml :Full
+3) Pepsi 300 ml :Full
+4) Sprite 200 ml :Full
+5) Fanta 250 ml :Full
+6) Sprite 200 ml :Full
+7) Fanta 300 ml :Full
+8) Fanta 300 ml :Full
+9) Pepsi 300 ml :Full
+10) Fanta 300 ml :Full
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Room No. 301 has been Booked for Guest No.8
+
+ROOM INFORMATION :
+Room No : 301
+Floor No : 3
+Phone No : 0301
+Occupancy : 5
+
+BOOKING INFORMATION : 
+Booking Date : 18/02/2018
+Booking Time : 06:33:12
+Booked for Duration : 2 Days
+Rent : 4000
+
+GUEST INFORMATION :
+Name : Kathryn Boyd
+CNIC : 7921327919
+Birthday : 05/25/1994
+
+Name : Thomas Woods
+CNIC : 2693843041
+Birthday : 11/16/1968
+
+Name : Olive Clarke
+CNIC : 0571052251
+Birthday : 08/22/1994
+
+Name : Kathryn Boyd
+CNIC : 7921327919
+Birthday : 05/25/1994
+
+Name : Patrick Bailey
+CNIC : 3759034794
+Birthday : 04/12/1956
+
+Refrigerator Status : 
+1) Sprite 250 ml :Full
+2) Fanta 300 ml :Full
+3) Pepsi 250 ml :Full
+4) Sprite 250 ml :Full
+5) Pepsi 250 ml :Full
+6) Pepsi 300 ml :Full
+7) Pepsi 200 ml :Full
+8) Sprite 200 ml :Full
+9) Pepsi 200 ml :Full
+10) Pepsi 200 ml :Full
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Hotel Check-Outs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Guests in Room 102 have checked out
+
+
+ROOM INFORMATION :
+Room No : 102
+Floor No : 1
+Phone No : 0102
+Occupancy : 4
+
+BOOKING INFORMATION : 
+Booking Date : 17/02/2018
+Booking Time : 14:00:44
+Booked for Duration : 1 Days
+Rent : 1600
+
+DEPARTURE INFORMATION : 
+Checkout Date : 18/02/2018
+Checkout Time : 15:56:03
+Stayed for Days : 1
+ColdDrinks Consumed : 17
+
+GUEST INFORMATION :
+Name : James Hines
+CNIC : 5521106989
+Birthday : 05/07/1985
+
+Name : Lily Hunter
+CNIC : 6733446179
+Birthday : 08/20/1962
+
+Name : Rosetta Perkins
+CNIC : 5684637666
+Birthday : 02/05/1954
+
+Name : Edward Owens
+CNIC : 2812687346
+Birthday : 09/18/1966
+
+Refrigerator Status : 
+1) Sprite 200 ml :Full
+2) Pepsi 300 ml :Full
+3) Fanta 300 ml :Full
+4) Pepsi 250 ml :Full
+5) Fanta 250 ml :Full
+6) Sprite 200 ml :Full
+7) Pepsi 250 ml :Full
+8) Sprite 250 ml :Full
+9) Fanta 250 ml :Full
+10) Pepsi 250 ml :Full
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Guests in Room 103 have checked out
+
+
+ROOM INFORMATION :
+Room No : 103
+Floor No : 1
+Phone No : 0103
+Occupancy : 2
+
+BOOKING INFORMATION : 
+Booking Date : 17/02/2018
+Booking Time : 06:06:11
+Booked for Duration : 1 Days
+Rent : 800
+
+DEPARTURE INFORMATION : 
+Checkout Date : 18/02/2018
+Checkout Time : 18:56:59
+Stayed for Days : 1
+ColdDrinks Consumed : 7
+
+GUEST INFORMATION :
+Name : Matilda Poole
+CNIC : 1088977065
+Birthday : 09/25/1999
+
+Name : Rebecca Ortiz
+CNIC : 5595511975
+Birthday : 09/07/1977
+
+Refrigerator Status : 
+1) Pepsi 250 ml :Empty
+2) Fanta 300 ml :Empty
+3) Pepsi 300 ml :Empty
+4) Fanta 200 ml :Empty
+5) Pepsi 200 ml :Empty
+6) Pepsi 200 ml :Empty
+7) Pepsi 200 ml :Full
+8) Pepsi 250 ml :Full
+9) Fanta 200 ml :Full
+10) Fanta 250 ml :Full
+
+
+
+
+
+-----------------------------------------
+          Total Check-Ins : 16
+          Total Check-Outs : 2
+       Total Hotel Income : 101200
+-----------------------------------------
+

@@ -1,0 +1,5 @@
+Room Number : 109
+Phone Number : 0109
+Occupancy : 3
+
+Room has no Booking History

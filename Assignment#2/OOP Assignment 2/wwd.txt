@@ -1,0 +1,34 @@
+plot(t,v)
+time=t
+>> plot(t,v)
+>> v
+>> m=v-141
+
+>> plot(t,m)
+>> m2=v2-141
+
+>> plot(t2,m2)
+>> m3 = v3-141
+>> plot(t3,m3)
+>> plot(t,m)
+>> mbh=mean(m)
+>> mah=mean(m3)
+>> mavg=(11.1580+95.9050)/2
+>> mavg=(111.1580+95.9050)/2
+>> m2-mavg
+
+>> fm=m2-mavg
+>> plot(t2,fm,'*')
+>> showfit
+Equation: Y(X) = A*X+B
+     A = 1.0071e-06
+     B = 1.2173
+     R = 3.5255e-12  (lin)
+rmfit
+plot(t2,fm,'*')
+showfit
+Equation: Y(X) = A*X+B
+     A = -136.49
+     B = 1.0059e+08
+     R = 0.9918  (lin)
+>>

@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1508416397 source:c:\users\minhaj ahmed moin\downloads\compressed\eca\assignment4\list\list.cpp
+	<stdlib.h>
+	"include/list.h"
+
+1508147590 c:\users\minhaj ahmed moin\downloads\compressed\eca\assignment4\list\include\list.h
+	"node.h"
+	<string>
+	<sstream>
+	<iostream>
+
+1506431249 c:\users\minhaj ahmed moin\downloads\compressed\eca\assignment4\list\include\node.h
+	<iostream>
+
+1508416424 source:c:\users\minhaj ahmed moin\downloads\compressed\eca\assignment4\list\main.cpp
+	<iostream>
+	"include/list.h"
+
