@@ -1,2 +1,2 @@
 # Object-Oriented-Programming
-Practice Questions in OOP by Umair
+Submitted Assignments for CS-224 Object Oriented Programming Course taken in Fall 2017 Semester, at Habib University
